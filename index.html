@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Powerpark Electricals (Pty) Ltd</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+
+/* STACK SANS NOTCH FONT */
+@font-face {
+  font-family: 'Stack Sans Notch';
+  src: url('fonts/StackSansNotch-Bold.woff2') format('woff2'),
+       url('fonts/StackSansNotch-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* BODY COPY FONT */
+body,
+p,
+span,
+a,
+li,
+input,
+textarea,
+button,
+select,
+label{
+  font-family:'Google Sans', sans-serif;
+}
+
+/* HEADINGS FONT */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo,
+.call-btn,
+.btn-primary,
+.btn-secondary,
+.submit-btn{
+  font-family:'Stack Sans Notch', sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#1a1718;
+  color:#ffffff;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:#ffffff;
+}
+
+.container{
+  width:92%;
+  max-width:1280px;
+  margin:auto;
+}
+
+    /* HERO */
+    .hero{
+      position:relative;
+      min-height:860px;
+      margin:40px;
+      border-radius:0;
+      overflow:hidden;
+
+      background:
+      linear-gradient(to right,
+      rgba(0,0,0,.70) 10%,
+      rgba(0,0,0,.25) 65%),
+      url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1800&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+
+      padding:40px 0 70px;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .nav-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      width:100%;
+    }
+
+    .hamburger{
+      display:none;
+      background:none;
+      border:none;
+      color:#ffffff;
+      font-size:24px;
+      cursor:pointer;
+      padding:10px;
+    }
+
+    /* Navigation container */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: nowrap; /* prevents wrapping */
+    }
+
+    /* Navigation text */
+    .nav-links a {
+      white-space: nowrap; /* keeps text on one line */
+      text-decoration: none;
+      color: white;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover{
+      opacity:1;
+    }
+
+    .call-btn{
+      padding:14px 26px;
+      border-radius:100px;
+      font-size:14px;
+      box-shadow:0 10px 25px rgba(0,0,0,.15);
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+
+    .logo-img{
+      display:block;
+      height:40px;
+      width:auto;
+    }
+
+    .footer-logo-img{
+      height:30px;
+    }
+
+    .hero-content{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:80px;
+      align-items:center;
+      margin-top:80px;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:10px 18px;
+      border:1px solid rgba(255,255,255,.3);
+      border-radius:40px;
+      backdrop-filter:blur(10px);
+      margin-bottom:25px;
+      font-size:14px;
+    }
+
+    .hero h1{
+      font-size:88px;
+      line-height:.95;
+      max-width:700px;
+      letter-spacing:-3px;
+      margin-bottom:28px;
+    }
+
+    .hero p{
+      max-width:520px;
+      font-size:18px;
+      opacity:.92;
+      margin-bottom:40px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:18px;
+    }
+
+    .btn-primary{
+      background:#d8b041;
+      color:#000000;
+      padding:18px 34px;
+      border-radius:100px;
+      font-size:15px;
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      box-shadow:0 14px 35px rgba(0,0,0,.2);
+    }
+
+    .btn-secondary{
+      border:1px solid rgba(255,255,255,.3);
+      color:#ffffff;
+      padding:18px 34px;
+      border-radius:100px;
+    }
+
+    .hero-right{
+      position:relative;
+      display:flex;
+      justify-content:flex-end;
+    }
+
+    .hero-right img{
+      width:100%;
+      max-width:540px;
+      height:680px;
+      object-fit:cover;
+      border-radius:0;
+      box-shadow:none;
+    }
+
+    .glass-card{
+      position:absolute;
+      bottom:40px;
+      left:-40px;
+
+      width:320px;
+
+      background:rgba(0,0,0,.35);
+      backdrop-filter:blur(14px);
+
+      border:1px solid rgba(255,255,255,.12);
+
+      padding:34px;
+      border-radius:24px;
+    }
+
+    .glass-card h3{
+      font-size:28px;
+      margin-bottom:18px;
+    }
+
+    .glass-card p{
+      font-size:15px;
+      line-height:1.8;
+      margin-bottom:20px;
+    }
+
+    /* SECTION */
+    .section{
+      background:#1a1718;
+      padding:120px 0;
+      color:#ffffff;
+    }
+
+    .section-top{
+      display:grid;
+      grid-template-columns:.8fr 1.2fr;
+      gap:100px;
+      margin-bottom:70px;
+      align-items:flex-start;
+    }
+
+    .mini-tabs{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+      margin-bottom:30px;
+    }
+
+    .mini-tabs span{
+      border:1px solid rgba(255,255,255,.1);
+      background:transparent;
+      color:#ffffff;
+      padding:12px 24px;
+      border-radius:100px;
+      font-size:14px;
+    }
+
+    .mini-tabs .active{
+      background:#d8b041;
+      color:#000000;
+      border:none;
+    }
+
+    .section h2{
+      font-size:72px;
+      line-height:1;
+      letter-spacing:-2px;
+      margin-bottom:30px;
+      max-width:800px;
+    }
+
+    .section p{
+      font-size:17px;
+      line-height:1.9;
+      color:rgba(255,255,255,.75);
+    }
+
+    .learn-btn{
+      display:inline-block;
+      margin-top:35px;
+      border:1px solid #d8b041;
+      padding:16px 28px;
+      border-radius:100px;
+      color:#ffffff;
+      background:transparent;
+    }
+
+    /* CARDS */
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:24px;
+      margin-top:90px;
+    }
+
+    .card{
+      background:#222;
+      border-radius:0;
+      overflow:hidden;
+      min-height:300px;
+      border:none;
+    }
+
+    .card img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+      border-radius:0;
+      display:block;
+    }
+
+    .card-content{
+      padding:35px;
+    }
+
+    .card h3{
+      font-size:58px;
+      line-height:1;
+      margin-bottom:10px;
+    }
+
+    .highlight{
+      background:#d8b041;
+      color:#000000;
+    }
+
+    /* SERVICES */
+    .services{
+      background:#1a1718;
+      padding:120px 0;
+      color:#ffffff;
+    }
+
+    .services-title{
+      text-align:center;
+      margin-bottom:70px;
+    }
+
+    .services-title h2{
+      font-size:78px;
+      line-height:1;
+      letter-spacing:-2px;
+      margin-bottom:20px;
+    }
+
+    .services-title p{
+      color:rgba(255,255,255,.7);
+    }
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:28px;
+      margin-top:70px;
+    }
+
+    .service-box{
+      background:#232021;
+      padding:50px;
+      border-radius:0;
+      transition:.3s;
+      border:none;
+    }
+
+    .service-box:hover{
+      transform:translateY(-8px);
+    }
+
+    .service-box h3{
+      font-size:34px;
+      margin-bottom:20px;
+      color:#d8b041;
+    }
+
+    .service-box p{
+      color:rgba(255,255,255,.75);
+      margin-bottom:25px;
+      line-height:1.9;
+    }
+
+    .service-box a{
+      color:#d8b041;
+      font-weight:700;
+      margin-top:10px;
+      display:inline-block;
+    }
+
+    /* WHY US */
+    .why-us{
+      background:#1a1718;
+      padding:120px 0;
+      color:#ffffff;
+    }
+
+    .why-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:25px;
+      margin-top:50px;
+    }
+
+    .why-card{
+      background:#232021;
+      border-radius:0;
+      padding:40px;
+    }
+
+    .why-card h3{
+      margin-bottom:15px;
+      font-size:28px;
+      color:#d8b041;
+    }
+
+    .why-card p{
+      color:rgba(255,255,255,.75);
+    }
+
+    /* CLIENTS SECTION */
+    .clients-section{
+      background:#1a1718;
+      padding:120px 0;
+      color:#ffffff;
+    }
+
+    .clients-title{
+      text-align:center;
+      margin-bottom:70px;
+    }
+
+    .clients-title h2{
+      font-size:72px;
+      margin-bottom:20px;
+    }
+
+    .clients-title p{
+      color:rgba(255,255,255,.7);
+      font-size:17px;
+    }
+
+    .clients-slider{
+      position:relative;
+      overflow:hidden;
+      background:#232021;
+      border-radius:0;
+      border:none;
+      padding:45px 0;
+    }
+
+    .clients-track{
+      display:flex;
+      animation:scroll 20s linear infinite;
+      gap:40px;
+    }
+
+    .clients-track:hover{
+      animation-play-state:paused;
+    }
+
+    .client-logo{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-width:200px;
+      height:120px;
+      background:#1a1718;
+      border-radius:0;
+      font-weight:700;
+      font-size:22px;
+      color:#d8b041;
+      flex-shrink:0;
+      padding:15px;
+    }
+
+    .client-logo img{
+      max-width:100%;
+      max-height:100%;
+      width:auto;
+      height:auto;
+      object-fit:contain;
+    }
+
+    @keyframes scroll{
+      0%{
+        transform:translateX(0);
+      }
+      100%{
+        transform:translateX(-50%);
+      }
+    }
+
+    .clients-track{
+      width:200%;
+    }
+
+    /* WORK SECTION */
+    .work-section{
+      background:#1a1718;
+      padding:120px 0;
+      color:#ffffff;
+    }
+
+    .work-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:24px;
+      margin-top:60px;
+    }
+
+    .work-card{
+      background:#232021;
+      border-radius:24px;
+      overflow:hidden;
+      transition:transform .3s;
+    }
+
+    .work-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .work-card img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .work-card h3{
+      margin:24px 24px 12px;
+      font-size:28px;
+      color:#d8b041;
+    }
+
+    .work-card p{
+      margin:0 24px 24px;
+      color:rgba(255,255,255,.75);
+      line-height:1.9;
+    }
+
+    .about-summary{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+      margin-top:50px;
+    }
+
+    .about-feature{
+      background:#232021;
+      padding:30px;
+      border-radius:24px;
+    }
+
+    .about-feature h3{
+      margin-bottom:16px;
+      font-size:24px;
+      color:#d8b041;
+    }
+
+    .about-feature p{
+      color:rgba(255,255,255,.77);
+      line-height:1.9;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&display=swap');
+
+    .footer{
+      background:#171717;
+      padding:60px 70px 30px;
+      border-radius:8px;
+      color:#fff;
+      font-family:'Onest', sans-serif;
+    }
+
+    .footer-top{
+      display:flex;
+      justify-content:space-between;
+      gap:40px;
+      margin-bottom:50px;
+      flex-wrap:wrap;
+    }
+
+    .footer-text h2{
+      font-size:42px;
+      line-height:1.2;
+      font-weight:500;
+      max-width:500px;
+    }
+
+    .footer-subscribe h4{
+      margin-bottom:15px;
+      font-size:18px;
+      font-weight:500;
+    }
+
+    .footer-subscribe form{
+      display:flex;
+      align-items:center;
+      border:1px solid rgba(255,255,255,0.2);
+      border-radius:40px;
+      overflow:hidden;
+      padding:6px;
+      width:380px;
+    }
+
+    .footer-subscribe input{
+      flex:1;
+      background:transparent;
+      border:none;
+      outline:none;
+      padding:14px 18px;
+      color:#fff;
+      font-family:'Onest', sans-serif;
+    }
+
+    .footer-subscribe input::placeholder{
+      color:#aaa;
+    }
+
+    .footer-subscribe button{
+      border:none;
+      background:#00a76f;
+      color:#fff;
+      padding:14px 26px;
+      border-radius:30px;
+      cursor:pointer;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    .footer-subscribe button:hover{
+      background:#00c481;
+    }
+
+    .footer-links{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .footer-column h5{
+      color:#888;
+      font-size:12px;
+      margin-bottom:18px;
+      letter-spacing:1px;
+    }
+
+    .footer-column a,
+    .footer-column p{
+      display:block;
+      color:#fff;
+      text-decoration:none;
+      margin-bottom:12px;
+      font-size:15px;
+      transition:0.3s;
+    }
+
+    .footer-column a:hover{
+      color:#00c481;
+    }
+
+    .socials{
+      display:flex;
+      gap:14px;
+    }
+
+    .socials a{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,0.2);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,0.1);
+      padding-top:20px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:15px;
+      color:#999;
+      font-size:14px;
+    }
+
+    .footer-bottom div{
+      display:flex;
+      gap:20px;
+    }
+
+    .footer-bottom a{
+      color:#999;
+      text-decoration:none;
+    }
+
+    .footer-bottom a:hover{
+      color:#00c481;
+    }
+
+    @media(max-width:900px){
+
+      .footer{
+        padding:40px 25px;
+      }
+
+      .footer-links{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .footer-text h2{
+        font-size:32px;
+      }
+
+      .footer-subscribe form{
+        width:100%;
+      }
+    }
+
+    @media(max-width:600px){
+
+      .footer-links{
+        grid-template-columns:1fr;
+      }
+
+      .footer-bottom{
+        flex-direction:column;
+      }
+
+      .footer-subscribe form{
+        flex-direction:column;
+        border-radius:20px;
+      }
+
+      .footer-subscribe button{
+        width:100%;
+      }
+    }
+
+    /* MAP SECTION */
+    .map-section{
+      background:#1a1718;
+      padding:120px 0;
+      color:#ffffff;
+    }
+
+    .map-section h2{
+      font-size:72px;
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .map-location-grid{
+      display:grid;
+      grid-template-columns:1fr 1.5fr;
+      gap:30px;
+      align-items:start;
+      margin-top:50px;
+    }
+
+    .map-details{
+      background:#232021;
+      padding:40px;
+      border-radius:24px;
+    }
+
+    .map-details p{
+      margin-bottom:24px;
+      color:rgba(255,255,255,.8);
+      line-height:1.9;
+    }
+
+    .location-item{
+      margin-bottom:18px;
+      color:rgba(255,255,255,.8);
+      line-height:1.8;
+    }
+
+    .location-item a{
+      color:#d8b041;
+      text-decoration:none;
+    }
+
+    .map-container{
+      width:100%;
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:none;
+    }
+
+    .map-container iframe{
+      width:100%;
+      height:500px;
+      border:none;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      margin-bottom:50px;
+    }
+
+    footer h2{
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .footer-contact div{
+      margin-bottom:12px;
+    }
+
+    .copyright{
+      border-top:1px solid rgba(255,255,255,.1);
+      padding-top:25px;
+      text-align:center;
+      font-size:14px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:1100px){
+
+      .hero{
+        margin:20px;
+        min-height:auto;
+      }
+
+      .hero-content,
+      .section-top,
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:64px;
+      }
+
+      .hero-right{
+        justify-content:flex-start;
+      }
+
+      .glass-card{
+        position:relative;
+        left:auto;
+        bottom:auto;
+        margin-top:20px;
+        width:100%;
+      }
+
+      .cards,
+      .why-grid,
+      .service-grid,
+      .about-summary,
+      .work-grid,
+      .map-location-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .nav-links{
+        gap:16px;
+      }
+
+      .section h2,
+      .services-title h2,
+      .clients-title h2,
+      .map-section h2,
+      .work-section h2{
+        font-size:52px;
+      }
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:30px;
+      }
+
+      .hamburger{
+        display:block;
+      }
+
+      .nav-links{
+        flex-direction:column;
+        gap:18px;
+        display:none;
+      }
+
+      .nav-links.open{
+        display:flex;
+      }
+
+      .hero{
+        margin:0;
+      }
+
+      .hero h1{
+        font-size:46px;
+        letter-spacing:-1px;
+      }
+
+      .hero-right img{
+        height:500px;
+      }
+
+      .cards,
+      .why-grid,
+      .service-grid,
+      .about-summary,
+      .work-grid,
+      .map-location-grid{
+        grid-template-columns:1fr;
+      }
+
+      .section h2,
+      .services-title h2,
+      .clients-title h2,
+      .map-section h2{
+        font-size:40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+
+    <div class="container">
+
+      <nav>
+        <div class="nav-top">
+          <div class="logo">
+          <img src="Powerpark Header logo.svg" alt="Powerpark Electricals logo" class="logo-img">
+        </div>
+
+          <button class="hamburger" onclick="toggleMenu()">☰</button>
+        </div>
+
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="reports.html">Reports</a>
+          <a href="#our-work">Our Work</a>
+          <a href="quotes.html">Get a Quote</a>
+          <a href="#contact" class="call-btn">Contact</a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+
+        <div>
+
+          <div class="badge">
+            ⚡ Registered & SANS 10142-1 Compliant
+          </div>
+
+          <h1>
+            Expert Electrical Solutions from the Midlands to the Rest of SA
+          </h1>
+
+          <p>
+            Proudly serving Pietermaritzburg, the Greater Midlands, and projects across South Africa with reliable, safe electrical work.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="quotes.html" class="btn-primary">Get a Quote</a>
+            <a href="https://wa.me/27797103605" class="btn-secondary">Text Us on WhatsApp</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+
+    <div class="container">
+
+      <div class="section-top">
+
+        <div>
+
+          <div class="mini-tabs">
+            <span class="active">About Us</span>
+            <span>Services</span>
+            <span>Safety</span>
+            <span>Solar</span>
+          </div>
+
+          <p>
+            • Trusted Electrical Experts in Pietermaritzburg
+          </p>
+
+        </div>
+
+        <div>
+
+          <h2>
+            Reliable electrical solutions backed by compliance, safety, and experience.
+          </h2>
+
+          <p>
+            From residential installations to industrial electrical systems and solar power solutions, Powerpark Electricals delivers dependable workmanship that meets South African standards.
+          </p>
+
+          <p>
+            Our team combines local knowledge, SANS-certified safety practices and fast response to deliver every project on time and within budget.
+          </p>
+
+          <a href="#contact" class="learn-btn">Get In Touch</a>
+
+        </div>
+
+      </div>
+
+      <div class="about-summary">
+        <div class="about-feature">
+          <h3>Registered and Insured</h3>
+          <p>Full company registration with licensing and insurance for peace of mind on every job.</p>
+        </div>
+        <div class="about-feature">
+          <h3>SANS 10142-1 Compliant</h3>
+          <p>All installations, repairs and certifications meet South African electrical safety standards.</p>
+        </div>
+        <div class="about-feature">
+          <h3>24/7 Emergency Response</h3>
+          <p>Rapid support for urgent faults, outages and safety issues throughout the Midlands and beyond.</p>
+        </div>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop" alt="">
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>24/7</h3>
+            <strong>Emergency Support</strong>
+
+            <p style="margin-top:15px;">
+              Fast response for outages, electrical faults, and emergency repairs throughout the Midlands and beyond.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop" alt="">
+        </div>
+
+        <div class="card highlight">
+          <div class="card-content">
+            <h3>100%</h3>
+            <strong>SANS Compliant</strong>
+
+            <p style="margin-top:15px;">
+              All installations and repairs adhere to SANS 10142-1 electrical safety standards.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+
+    <div class="container">
+
+      <div class="services-title">
+        <h2>Core Services</h2>
+
+        <p>
+          From wiring to solar installations — we handle every project with expertise.
+        </p>
+      </div>
+
+      <div class="service-grid">
+
+        <div class="service-box">
+          <h3>Residential & Industrial Wiring</h3>
+
+          <p>
+            Complete electrical wiring solutions for homes, factories, offices, and commercial properties.
+          </p>
+
+          <a href="quotes.html">Request a Quote →</a>
+        </div>
+
+        <div class="service-box">
+          <h3>24/7 Emergency Repairs</h3>
+
+          <p>
+            Fast and reliable response for outages, short circuits, and dangerous electrical faults.
+          </p>
+
+          <a href="quotes.html">Request a Quote →</a>
+        </div>
+
+        <div class="service-box">
+          <h3>Certificates of Compliance</h3>
+
+          <p>
+            Official CoC inspections and certifications for property sales, insurance, and regulations.
+          </p>
+
+          <a href="quotes.html">Request a Quote →</a>
+        </div>
+
+        <div class="service-box">
+          <h3>Solar & Inverter Installations</h3>
+
+          <p>
+            Professional solar and inverter solutions to beat load shedding and save energy.
+          </p>
+
+          <a href="quotes.html">Request a Quote →</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- OUR WORK -->
+  <section id="our-work" class="work-section">
+
+    <div class="container">
+
+      <div class="services-title">
+        <h2>Our Work</h2>
+        <p>Projects completed with quality, safety and craftsmanship.</p>
+      </div>
+
+      <div class="work-grid">
+        <div class="work-card">
+          <img src="https://images.unsplash.com/photo-1492666458071-4d1c093e2b2d?q=80&w=1200&auto=format&fit=crop" alt="Residential wiring project">
+          <h3>Residential Wiring</h3>
+          <p>Modern home electrics, lighting upgrades and safety compliance for houses and apartments.</p>
+        </div>
+        <div class="work-card">
+          <img src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=1200&auto=format&fit=crop" alt="Industrial electrical maintenance">
+          <h3>Industrial Installations</h3>
+          <p>Warehouse, factory and commercial power systems designed for reliability and efficiency.</p>
+        </div>
+        <div class="work-card">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop" alt="Solar installation">
+          <h3>Solar & Inverter</h3>
+          <p>Professional solar panel and backup inverter installations to reduce load shedding impact.</p>
+        </div>
+        <div class="work-card">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Certificate of compliance work">
+          <h3>CoC Certifications</h3>
+          <p>Certified inspections and Certificates of Compliance for sales, insurance and safety audits.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- WHY US -->
+  <section id="why-us" class="why-us">
+
+    <div class="container">
+
+      <div class="services-title">
+        <h2>Trust & Expertise</h2>
+
+        <p>
+          Safety, compliance, and quality are at the core of every project.
+        </p>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-card">
+          <h3>SANS 10142-1 Compliant</h3>
+
+          <p>
+            All work adheres to South African National Standards for electrical safety.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <h3>Registered (Pty) Ltd</h3>
+
+          <p>
+            A fully registered company you can trust with professional accountability.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <h3>Midlands & Beyond</h3>
+
+          <p>
+            Based in Pietermaritzburg and serving projects across South Africa.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <h3>24/7 Availability</h3>
+
+          <p>
+            Electrical emergencies handled around the clock with fast response times.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CLIENTS -->
+  <section id="clients" class="clients-section">
+
+    <div class="container">
+
+      <div class="clients-title">
+        <h2>Our Clients</h2>
+        <p>Trusted by leading businesses across South Africa</p>
+      </div>
+
+      <div class="clients-slider">
+        <div class="clients-track">
+          <div class="client-logo"><img src="logos/malawi-illovo.svg" alt="Malawi Illovo"></div>
+          <div class="client-logo"><img src="logos/ALM - Main White.svg" alt="ALM"></div>
+          <div class="client-logo"><img src="logos/Asset 1.svg" alt="Client Logo"></div>
+          <div class="client-logo"><img src="logos/malawi-illovo.svg" alt="Malawi Illovo"></div>
+          <div class="client-logo"><img src="logos/ALM - Main White.svg" alt="ALM"></div>
+          <div class="client-logo"><img src="logos/Asset 1.svg" alt="Client Logo"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MAP -->
+  <section id="location" class="map-section">
+
+    <div class="container">
+
+      <h2>Our Location</h2>
+
+      <div class="map-location-grid">
+        <div class="map-details">
+          <p>Visit or call us for fast electrical service and certification support.</p>
+          <div class="location-item"><strong>Address:</strong> 13 Beaumont Road, Boughton, Pietermaritzburg, 3201, KZN</div>
+          <div class="location-item"><strong>Phone:</strong> <a href="tel:0797103605">079 710 3605</a></div>
+          <div class="location-item"><strong>WhatsApp:</strong> <a href="https://wa.me/27797103605">079 710 3605</a></div>
+          <div class="location-item"><strong>Hours:</strong> Mon–Sun, 24/7 Emergency Support</div>
+        </div>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.5445098456006!2d30.323269999999998!3d-29.609350000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6a30a04f65c23%3A0x3cfb38c3422a184a!2sPowerpark%20Electricals%20(Pty)%20Ltd!5e0!3m2!1sen!2sza!4v1620000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="footer">
+
+    <div class="footer-top">
+      <div class="footer-text">
+        <h2>Expert Electrical Solutions Across South Africa</h2>
+      </div>
+      <div class="footer-subscribe">
+        <h4>Stay Updated</h4>
+        <form>
+          <input type="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-column">
+        <h5>SERVICES</h5>
+        <a href="#services">Residential Wiring</a>
+        <a href="#services">Emergency Repairs</a>
+        <a href="#services">Certificates of Compliance</a>
+        <a href="#services">Solar Installations</a>
+      </div>
+      <div class="footer-column">
+        <h5>COMPANY</h5>
+        <a href="#about">About Us</a>
+        <a href="#our-work">Our Work</a>
+        <a href="reports.html">Reports</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-column">
+        <h5>CONTACT</h5>
+        <p>079 710 3605</p>
+        <p>067 850 6542</p>
+        <p>powerparkelect@gmail.com</p>
+        <p>13 Beaumont Road, Boughton</p>
+      </div>
+      <div class="footer-column">
+        <h5>FOLLOW US</h5>
+        <div class="socials">
+          <a href="#">FB</a>
+          <a href="#">IG</a>
+          <a href="#">LI</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Powerpark Electricals (Pty) Ltd. All rights reserved.</div>
+      <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+</html>
